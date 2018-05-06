@@ -1,0 +1,8 @@
+Name: Pavlo юськів
+Birthday: 13 липня
+ID number: Паспорт номер 1
+Arrival: завтра
+Departure: 13.13.13
+Room: Ройал
+People: 2
+Why?: Бо ви круті
