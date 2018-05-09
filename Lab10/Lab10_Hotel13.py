@@ -1,7 +1,7 @@
-
+import csv
 print ("Print: 'help()'")
 def help():
-    print("help()\nregistration()\nshow_info()")
+    print("help()\nregistration()\nopen()")
 def registration():
     print("Best Hotel In The World!")
     print("Please, enter your ID info")
@@ -22,7 +22,7 @@ def registration():
     hotel = {'ID': {'Name': name, 'Birthday' : born, 'ID number': number},
              'Arrival': arrival, 'Departure': depar, 'Room': clas, 'People':people,
              'Why?': why}
-    
+    print(hotel.items())
     with open('test.txt', 'w') as file:
         file.write("Name: ")
         file.write(name)
@@ -40,7 +40,25 @@ def registration():
         file.write(people)
         file.write("\nWhy?: ")
         file.write(why)
-def show_info():
-    file = open('test.txt')
-    for line in file:
-        print(line)
+        file.write("\n")
+def toString():
+    f = open('test.txt')
+    for line in f:
+        print(line, end = "")
+def add(x):
+    with open('test.txt', 'a') as file:
+        file.write(x)
+def clear():
+    with open('test.txt', 'w') as file:
+        file.write('')
+def remove(x):
+    f = open("test.txt","r+")
+    d = f.readlines()
+    f.seek(0)
+    for i in d:
+        if i != x:
+            f.write(i)
+    f.truncate()
+    f.close()
+    
+
